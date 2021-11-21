@@ -25,5 +25,5 @@ Login_button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS
 
 time.sleep(3)
 notnow = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Not Now")]'))).click()
-
+#continue from here
 #<button class="aOOlW  bIiDR  " tabindex="0">Accept All</button>
