@@ -22,8 +22,10 @@ username.send_keys(USERNAME)
 password.clear()
 password.send_keys(PASSWORD)
 Login_button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[type='submit']"))).click()
+time.sleep(10)
+not_now = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Not Now")]'))).click()
+not_now2 = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Not Now")]'))).click()
 
-time.sleep(3)
-notnow = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//button[contains(text(), "Not Now")]'))).click()
 #continue from here
 #<button class="aOOlW  bIiDR  " tabindex="0">Accept All</button>
+#<button class="sqdOP yWX7d    y3zKF     " type="button">Not now</button>
