@@ -1,3 +1,16 @@
-{% extends "base.html" %}
-{% block title %} Home {% endblock %}
-{% block content%} <h1> This is a bakwas</h1> {% endblock %}
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %} 
+
+{% block content%}
+<h1 align="center">Image Generator</h1>
+
+<div class="text-center">
+  <img src="{{url_for('static', filename='test.png')}}" class="rounded" alt="Generated Imag">
+</div>
+
+<br>
+
+<form action = "/" method = "post">
+  <input type="submit" value="Generate Image" name="ImageGenButton"  class="btn btn-primary btn-lg btn-block"/>
+</form>
+{% endblock %}
