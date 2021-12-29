@@ -2,15 +2,43 @@
 {% block title %}Home{% endblock %} 
 
 {% block content%}
-<h1 align="center">Image Generator</h1>
 
-<div class="text-center">
-  <img src="{{url_for('static', filename='test.png')}}" class="rounded" alt="Generated Imag">
+<div class="container-fluid" align="center">
+  <br>
+  <h1 class="text-center">Image Generator</h1>
+  <br>
+  <div class="row text-center">
+      <div class="col-md-6">
+        <img src="{{url_for('static', filename='test.png')}}" class="rounded" alt="Generated Image">
+      </div>
+      <div class="col-md-6">
+        <h5 align="center">{{ quote }}</h5>
+      </div>
+  </div>
 </div>
 
 <br>
+<div class="container-fluid" align="center">
 
-<form action = "/" method = "post">
-  <input type="submit" value="Generate Image" name="ImageGenButton"  class="btn btn-primary btn-lg btn-block"/>
-</form>
+<div class="btn-group" role="group" aria-label="Buttons">
+
+  <form class="btn-group" action = "/" method = "post">
+    <button type="submit" type="button" value="Generate Image" name="ImageGenButton" class="btn btn-primary">Generate Image</button>
+    <input type="hidden" class="btn">
+  </form>
+
+  <form class="btn-group" action = "/" method = "post">
+    <button type="submit" type="button" value="Generate Both" name="BothGenButton" class="btn btn-primary">Generate Both</button>
+    <input type="hidden" class="btn">
+  </form>
+
+  <form class="btn-group" action = "/" method = "post">
+    <button type="submit" type="button" value="Generate Caption" name="CaptionGenButton" class="btn btn-primary">Generate Caption</button>
+  </form>
+
+</div>
+
+</div>
+
+
 {% endblock %}
